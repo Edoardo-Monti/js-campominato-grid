@@ -29,15 +29,29 @@ function mioElemento(){
         quadratino = document.createElement(`div`)
         //aggiungo la classe gia creata ad ogni elemento
         quadratino.classList.add("box")
+        //ad ogni quadratino scrivo dentro il valore di i
+        quadratino.innerText = i
         // quadratino.classList.add("different-color")
-        console.log(quadratino)
+        // console.log(quadratino)
+
+        //al click del mio quadratino tolgo o aggiungo la classe che cambia di colore
+        quadratino.addEventListener(`click`, function(){
+            //con this targettizzo l'elemento che voglio(credo)
+            this.classList.toggle("different-color")     
+            console.log(this)
+        })
         //visualizzo il mio elemtno in pagina
         destination.append(quadratino)
-    }
-    
+    }  
+     
+    return quadratino
 }
 
-console.log(mioElemento())
+mioElemento()
+
+
+// console.log(quadratino)
+
 //creo la variabile per targhettizzare il mio elemento html
 let button = document.querySelector("button")
 //al click del mio bottone faccio apparire la griglia
@@ -46,9 +60,8 @@ button.addEventListener(`click`, function(){
     destination.classList.remove("display-none")
 })
 
-quadratino.addEventListener(`click`, function(){
-    quadratino.classList.add("different-color")
-})
+
+
 
 
 
