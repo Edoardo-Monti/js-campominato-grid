@@ -1,7 +1,14 @@
 /*
 Consegna
 L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
+//addEventListener 
+//ciclo for
+//append
+//CreateElement
+
 Ogni cella ha un numero progressivo, da 1 a 100.
+
+
 Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 Bonus
@@ -11,3 +18,18 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 */
 
+
+function mioElemento(){
+    //variabile che indica la destinazion nell'html
+    let destination = document.querySelector(".griglia")
+    for(i = 1; i <= 100; i++){
+        let quadratino = document.createElement(`div`)
+        quadratino.classList.add("box")
+        console.log(quadratino)
+        destination.append(quadratino)
+        
+        
+    }
+}
+
+console.log(mioElemento())
