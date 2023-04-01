@@ -27,7 +27,8 @@
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 100%;
+    padding: 400px;
 }
 
 .box{
@@ -53,4 +54,8 @@
 .different-color{
     background-color: white;
     box-shadow: none;
+}
+
+.display-none{
+    display: none;
 }

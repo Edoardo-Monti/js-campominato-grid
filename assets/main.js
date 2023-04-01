@@ -18,18 +18,37 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 */
 
-
+let destination = document.querySelector(".griglia")
+let quadratino
 function mioElemento(){
     //variabile che indica la destinazion nell'html
-    let destination = document.querySelector(".griglia")
+    destination = document.querySelector(".griglia")
+    
     for(i = 1; i <= 100; i++){
-        let quadratino = document.createElement(`div`)
+        //creo l'elemento che voglio vedere
+        quadratino = document.createElement(`div`)
+        //aggiungo la classe gia creata ad ogni elemento
         quadratino.classList.add("box")
+        // quadratino.classList.add("different-color")
         console.log(quadratino)
+        //visualizzo il mio elemtno in pagina
         destination.append(quadratino)
-        
-        
     }
+    
 }
 
 console.log(mioElemento())
+//creo la variabile per targhettizzare il mio elemento html
+let button = document.querySelector("button")
+//al click del mio bottone faccio apparire la griglia
+button.addEventListener(`click`, function(){
+    
+    destination.classList.remove("display-none")
+})
+
+quadratino.addEventListener(`click`, function(){
+    quadratino.classList.add("different-color")
+})
+
+
+
