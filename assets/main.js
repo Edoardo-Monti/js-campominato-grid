@@ -65,7 +65,7 @@ function mioElemento2(){
     //variabile che indica la destinazion nell'html
     destination2 = document.querySelector(".griglia2")
     
-    for(a = 1; a <= 82 ; a++){
+    for(a = 1; a <= 81 ; a++){
         //creo l'elemento che voglio vedere
         quadratino2 = document.createElement(`div`)
         //aggiungo la classe gia creata ad ogni elemento
@@ -87,7 +87,7 @@ function mioElemento2(){
     return quadratino2
 }
 
-console.log(mioElemento2())
+mioElemento2()
 
 /********************  BONUS 2  ****************************************** */
 
@@ -119,9 +119,7 @@ function mioElemento3(){
     return quadratino3
 }
 
-console.log(mioElemento3())
-
-
+mioElemento3()
 
 
 
@@ -131,16 +129,16 @@ console.log(mioElemento3())
 let button = document.querySelector("button")
 //al click del mio bottone faccio apparire la griglia
 button.addEventListener(`click`, function(){
-    let primaOption = document.querySelector(".option1")   
-    let secondaOption = document.querySelector(".option2")
-    let terzaOption = document.querySelector(".option3")
-    
+    let primaOption = document.querySelector(".option1").value   
+    let secondaOption = document.querySelector(".option2").value
+    let terzaOption = document.querySelector(".option3").value
 
-    if(primaOption.value == 1){
+
+    if(primaOption != value){
         destination1.classList.remove("display-none")
-    }else if(secondaOption.value == 2){
+    }else if(secondaOption != valore2){
         destination2.classList.remove("display-none")
-    }else if(terzaOption.value == 3){
+    }else if(terzaOption == valore3){
         destination3.classList.remove("display-none")
     }
 

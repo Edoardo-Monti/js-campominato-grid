@@ -23,22 +23,12 @@
     
 }
 
-.griglia1, .griglia2 {
+.griglia1, .griglia2, .griglia3 {
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     padding: 400px;
-}
-
-
-
-.griglia3{
-    border: 1px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 300px;
 }
 
 .box{
