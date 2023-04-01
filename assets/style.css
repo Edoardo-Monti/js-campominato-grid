@@ -23,7 +23,7 @@
     
 }
 
-.griglia{
+.griglia1, .griglia2 {
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
@@ -31,9 +31,43 @@
     padding: 400px;
 }
 
+
+
+.griglia3{
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 300px;
+}
+
 .box{
     border: 1px solid black;
     width: calc(100% / 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-shadow:5px 5px 30px inset;
+    cursor: pointer;
+    aspect-ratio: 1
+}
+
+.box2{
+    border: 1px solid black;
+    width: calc(100% / 9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-shadow:5px 5px 30px inset;
+    cursor: pointer;
+    aspect-ratio: 1
+}
+
+.box3{
+    /* border: 1px solid black; */
+    width: calc(100% / 7);
     display: flex;
     justify-content: center;
     align-items: center;

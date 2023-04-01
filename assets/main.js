@@ -18,33 +18,33 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 */
 
-let destination = document.querySelector(".griglia")
-let quadratino
+let destination1 = document.querySelector(".griglia1")
+let quadratino1
 function mioElemento(){
     //variabile che indica la destinazion nell'html
-    destination = document.querySelector(".griglia")
+    destination1 = document.querySelector(".griglia1")
     
     for(i = 1; i <= 100; i++){
         //creo l'elemento che voglio vedere
-        quadratino = document.createElement(`div`)
+        quadratino1 = document.createElement(`div`)
         //aggiungo la classe gia creata ad ogni elemento
-        quadratino.classList.add("box")
+        quadratino1.classList.add("box")
         //ad ogni quadratino scrivo dentro il valore di i
-        quadratino.innerText = i
+        quadratino1.innerText = i
         // quadratino.classList.add("different-color")
         // console.log(quadratino)
 
         //al click del mio quadratino tolgo o aggiungo la classe che cambia di colore
-        quadratino.addEventListener(`click`, function(){
+        quadratino1.addEventListener(`click`, function(){
             //con this targettizzo l'elemento che voglio(credo)
             this.classList.toggle("different-color")     
             console.log(this)
         })
         //visualizzo il mio elemtno in pagina
-        destination.append(quadratino)
+        destination1.append(quadratino1)
     }  
      
-    return quadratino
+    return quadratino1
 }
 
 mioElemento()
@@ -52,16 +52,97 @@ mioElemento()
 
 // console.log(quadratino)
 
+
+
+
+
+/***************  BONUS 1 ********************************/
+
+
+let destination2 = document.querySelector(".griglia2")
+let quadratino2
+function mioElemento2(){
+    //variabile che indica la destinazion nell'html
+    destination2 = document.querySelector(".griglia2")
+    
+    for(a = 1; a <= 82 ; a++){
+        //creo l'elemento che voglio vedere
+        quadratino2 = document.createElement(`div`)
+        //aggiungo la classe gia creata ad ogni elemento
+        quadratino2.classList.add("box2")
+        //ad ogni quadratino scrivo dentro il valore di i
+        quadratino2.innerText = a
+        
+
+        //al click del mio quadratino tolgo o aggiungo la classe che cambia di colore
+        quadratino2.addEventListener(`click`, function(){
+            //con this targettizzo l'elemento che voglio(credo)
+            this.classList.toggle("different-color")     
+            console.log(this)
+        })
+        //visualizzo il mio elemtno in pagina
+        destination2.append(quadratino2)
+    }  
+     
+    return quadratino2
+}
+
+console.log(mioElemento2())
+
+/********************  BONUS 2  ****************************************** */
+
+let destination3 = document.querySelector(".griglia3")
+let quadratino3
+function mioElemento3(){
+    //variabile che indica la destinazion nell'html
+    destination3 = document.querySelector(".griglia3")
+    
+    for(x = 1; x <= 49 ; x++){
+        //creo l'elemento che voglio vedere
+        quadratino3 = document.createElement(`div`)
+        //aggiungo la classe gia creata ad ogni elemento
+        quadratino3.classList.add("box3")
+        //ad ogni quadratino scrivo dentro il valore di i
+        quadratino3.innerText = x
+        
+
+        //al click del mio quadratino tolgo o aggiungo la classe che cambia di colore
+        quadratino3.addEventListener(`click`, function(){
+            //con this targettizzo l'elemento che voglio(credo)
+            this.classList.toggle("different-color")     
+            console.log(this)
+        })
+        //visualizzo il mio elemtno in pagina
+        destination3.append(quadratino3)
+    }  
+     
+    return quadratino3
+}
+
+console.log(mioElemento3())
+
+
+
+
+
+
+
 //creo la variabile per targhettizzare il mio elemento html
 let button = document.querySelector("button")
 //al click del mio bottone faccio apparire la griglia
 button.addEventListener(`click`, function(){
+    let primaOption = document.querySelector(".option1")   
+    let secondaOption = document.querySelector(".option2")
+    let terzaOption = document.querySelector(".option3")
     
-    destination.classList.remove("display-none")
+
+    if(primaOption.value == 1){
+        destination1.classList.remove("display-none")
+    }else if(secondaOption.value == 2){
+        destination2.classList.remove("display-none")
+    }else if(terzaOption.value == 3){
+        destination3.classList.remove("display-none")
+    }
+
+    
 })
-
-
-
-
-
-
