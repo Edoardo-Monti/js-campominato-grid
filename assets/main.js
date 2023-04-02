@@ -129,18 +129,17 @@ mioElemento3()
 let button = document.querySelector("button")
 //al click del mio bottone faccio apparire la griglia
 button.addEventListener(`click`, function(){
-    let primaOption = document.querySelector(".option1").value   
-    let secondaOption = document.querySelector(".option2").value
-    let terzaOption = document.querySelector(".option3").value
+    
+    let select = document.getElementById("select").selectedIndex;
+    //targhettizzo il valore di ogni ption nell' html
+    let option = document.getElementsByTagName("option")[select].value;
 
-
-    if(primaOption != value){
+    if(option == 1){
         destination1.classList.remove("display-none")
-    }else if(secondaOption != valore2){
+    }else if(option == 2){
         destination2.classList.remove("display-none")
-    }else if(terzaOption == valore3){
+    }else{
         destination3.classList.remove("display-none")
     }
 
-    
 })
