@@ -38,7 +38,7 @@ function mioElemento(){
         quadratino1.addEventListener(`click`, function(){
             //con this targettizzo l'elemento che voglio(credo)
             this.classList.toggle("different-color")     
-            console.log(this.innerText)
+            console.log(parseInt(this.innerText))
         })
         //visualizzo il mio elemtno in pagina
         destination1.append(quadratino1)
