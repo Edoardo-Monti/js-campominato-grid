@@ -38,13 +38,12 @@ function mioElemento(){
         quadratino1.addEventListener(`click`, function(){
             //con this targettizzo l'elemento che voglio(credo)
             this.classList.toggle("different-color")     
-            console.log(this)
+            console.log(this.innerText)
         })
         //visualizzo il mio elemtno in pagina
         destination1.append(quadratino1)
     }  
      
-    return quadratino1
 }
 
 mioElemento()
@@ -78,13 +77,12 @@ function mioElemento2(){
         quadratino2.addEventListener(`click`, function(){
             //con this targettizzo l'elemento che voglio(credo)
             this.classList.toggle("different-color")     
-            console.log(this)
+            console.log(this.innerText)
         })
         //visualizzo il mio elemtno in pagina
         destination2.append(quadratino2)
     }  
      
-    return quadratino2
 }
 
 mioElemento2()
@@ -110,13 +108,12 @@ function mioElemento3(){
         quadratino3.addEventListener(`click`, function(){
             //con this targettizzo l'elemento che voglio(credo)
             this.classList.toggle("different-color")     
-            console.log(this)
+            console.log(this.innerText)
         })
         //visualizzo il mio elemtno in pagina
         destination3.append(quadratino3)
     }  
      
-    return quadratino3
 }
 
 mioElemento3()
@@ -129,10 +126,12 @@ mioElemento3()
 let button = document.querySelector("button")
 //al click del mio bottone faccio apparire la griglia
 button.addEventListener(`click`, function(){
-    
-    let select = document.getElementById("select").selectedIndex;
-    //targhettizzo il valore di ogni ption nell' html
-    let option = document.getElementsByTagName("option")[select].value;
+
+    //prendo il mio elemento select 
+    let select = document.getElementById("select");
+    //è il valore delle mie option dell'html
+    let option = parseInt(select.value)
+
 
     if(option == 1){
         destination1.classList.remove("display-none")
